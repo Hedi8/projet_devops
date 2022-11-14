@@ -3,14 +3,7 @@ pipeline {
 
 
     stages {
-          stage('Checkout GIT') {
-            steps {
-                echo 'Pulling...';
-                 git branch: 'raniaBack',
-                url : 'https://github.com/Hedi8/projet_devops'
-              
-            }
-        }
+          
         stage('MNV CLEAN') {
             steps {
                 sh 'mvn clean'
